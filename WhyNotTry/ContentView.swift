@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack{
+            Text("Why not try...")
+                .font(.largeTitle.bold())
             Circle()
                 .fill(.blue)
                 .padding()
