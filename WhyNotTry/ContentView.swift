@@ -36,7 +36,10 @@ struct ContentView: View {
             Spacer()
             
             Button("Try again...") {
-                selected = activities.randomElement() ?? "Archery"
+                withAnimation(.easeInOut(duration: 1)) {
+                    selected = activities.randomElement() ?? "Archery"
+                }
+                
             }.buttonStyle(.borderedProminent)
         }
     }
