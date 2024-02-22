@@ -31,10 +31,13 @@ struct ContentView: View {
                 
                 Text("\(selected)")
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                Button("Try again...") {
-                    selected = activities.randomElement() ?? "Archery"
-                }.buttonStyle(.borderedProminent)
             }
+            
+            Spacer()
+            
+            Button("Try again...") {
+                selected = activities.randomElement() ?? "Archery"
+            }.buttonStyle(.borderedProminent)
         }
     }
 }
