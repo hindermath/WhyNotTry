@@ -28,6 +28,7 @@ struct ContentView: View {
                         Image(systemName: "figure.\(selected.lowercased())")
                             .font(.system(size:144))
                             .foregroundColor(.white)
+                            .accessibilityLabel(selected)
                     )
                 
                 Text("\(selected)")
