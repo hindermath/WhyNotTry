@@ -15,22 +15,23 @@ struct ContentView: View {
     var colors: [Color] = [.blue, .cyan, .gray, .green, .indigo, .mint, .orange, .pink, .purple, .red]
     @State private var selected = "Archery"
     @State private var id = 1
+    var c = Circle()
     var body: some View {
         VStack {
             Text("Why not try...")
                 .font(.largeTitle.bold())
             
             VStack{
-                Circle()
+                //Circle()
+                c
                     .fill(colors.randomElement() ?? .blue)
                     .padding()
                     .overlay(
                         Image(systemName: "figure.\(selected.lowercased())")
                             .font(.system(size:144))
                             .foregroundColor(.white)
-                            .accessibilityLabel(selected)
+                            .accessibilityLabel("\(selected) in a")
                     )
-                
                 Text("\(selected)")
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
             }.transition(.slide)
