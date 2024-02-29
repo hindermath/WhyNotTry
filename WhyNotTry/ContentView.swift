@@ -28,9 +28,9 @@ struct ContentView: View {
                     .padding()
                     .overlay(
                         Image(systemName: "figure.\(selected.lowercased())")
-                            .font(.system(size:144))
+                            .font(.system(size: 144))
                             .foregroundColor(.white)
-                            .accessibilityLabel("\(selected) in a")
+                            .accessibilityLabel("Figure.\(selected) in a different colored circle")
                     )
                 Text("\(selected)")
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
